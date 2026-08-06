@@ -1,0 +1,94 @@
+# ============================
+#  PYTHON BACKEND
+# ============================
+
+# Virtual Environment
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Python compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Database files (if any later)
+*.db
+*.sqlite
+*.sqlite3
+
+# ============================
+#  NODE / VITE FRONTEND
+# ============================
+
+# Node modules
+frontend/node_modules/
+frontend/.pnp
+frontend/.pnp.js
+
+# Build output
+frontend/dist/
+frontend/build/
+frontend/.vite/
+frontend/*.tsbuildinfo
+
+# Logs
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/lerna-debug.log*
+frontend/package-lock.json  # Optional: ignore if you use Yarn; but many keep it. I recommend ignoring if you want deterministic builds via yarn.lock, but either is fine. I'll include it just in case.
+
+# ============================
+#  ENVIRONMENT VARIABLES (CRITICAL!)
+# ============================
+
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+
+# ============================
+#  IDE / OS / MISC
+# ============================
+
+# IDEs
+.vscode/
+.idea/
+*.iml
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs & temp
+*.log
+*.tmp
+*.temp
+
+# Generated workspaces (for Phase 2 when agents create files)
+workspace/
+generated_code/
+temp_output/
+
+# ============================
+#  PACKAGE MANAGERS (Optional, but good to sync)
+# ============================
+# If you use yarn, keep yarn.lock. If npm, keep package-lock.json.
+# I'll comment out the lockfile ignore so you commit lockfiles for consistent installs.
+# frontend/package-lock.json
