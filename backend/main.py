@@ -1,5 +1,3 @@
-import sys
-import os
 import asyncio
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -7,13 +5,11 @@ import socketio
 from dotenv import load_dotenv
 import uvicorn
 
-# Import our graph
+# Use absolute imports (since we run from root)
 from agents.graph import build_graph
 from agents.state import AgentState
 
 load_dotenv()
-
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # ============ SOCKET.IO SERVER ============
 sio = socketio.AsyncServer(

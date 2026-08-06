@@ -8,9 +8,17 @@ from .tools import save_file, run_python_script
 
 load_dotenv()
 
-# Initialize LLM
+# ====== LLM Configuration (Custom Endpoint) ======
+# Read environment variables
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "not-needed")       # Some routers require a dummy key
+OPENAI_BASE_URL = os.getenv("OPENAI_BASE_URL", "http://localhost:8000/v1")  # Your custom endpoint
+MODEL_NAME = os.getenv("MODEL_NAME", "llama3")                   # Model name your endpoint serves
+
+# Initialize LLM with custom base URL
 llm = ChatOpenAI(
-    model=os.getenv("MODEL_NAME", "gpt-4o-mini"),
+    model=MODEL_NAME,
+    base_url=OPENAI_BASE_URL,
+    api_key=OPENAI_API_KEY,
     temperature=0.3,
 )
 
